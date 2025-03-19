@@ -91,9 +91,12 @@ namespace Calc307
             _data.IsNew = true;
         }
 
+        private enum Theme { Denis, Marina };
+        private Theme T = Theme.Denis;
         private void Theme_Click(object sender, RoutedEventArgs e)
         {
-            var dict = new ResourceDictionary { Source = new Uri("Marina.xaml", UriKind.Relative) };
+            T = (Theme)(((int)T + 1) % 2);
+            var dict = new ResourceDictionary { Source = new Uri(T+".xaml", UriKind.Relative) };
             Resources.MergedDictionaries.Clear();
             Resources.MergedDictionaries.Add(dict);
         }

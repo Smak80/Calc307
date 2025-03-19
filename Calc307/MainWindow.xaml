@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:Calc307"
         mc:Ignorable="d"
         Title="MainWindow" Height="650" Width="400">
+	<Window.Resources>
+		<ResourceDictionary Source="Denis.xaml"/>
+	</Window.Resources>
     <Grid>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="3*"/>
@@ -23,23 +26,23 @@
 		</Grid.ColumnDefinitions>
 
 		<TextBox x:Name="InOutput" IsReadOnly="True" Text="0" FontSize="48" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Center"/>
-		<Button Content="C" Grid.Column="0" Grid.Row="1" FontSize="30" Click="Clear_Click"/>
-		<Button Content="÷" Grid.Column="3" Grid.Row="1" FontSize="30" Click="Action_Click"/>
-		<Button Content="7" Grid.Column="0" Grid.Row="2" FontSize="30" Click="Number_Click"/>
-		<Button Content="8" Grid.Column="1" Grid.Row="2" FontSize="30" Click="Number_Click"/>
-		<Button Content="9" Grid.Column="2" Grid.Row="2" FontSize="30" Click="Number_Click"/>
-		<Button Content="×" Grid.Column="3" Grid.Row="2" FontSize="30" Click="Action_Click"/>
-		<Button Content="4" Grid.Column="0" Grid.Row="3" FontSize="30" Click="Number_Click"/>
-		<Button Content="5" Grid.Column="1" Grid.Row="3" FontSize="30" Click="Number_Click"/>
-		<Button Content="6" Grid.Column="2" Grid.Row="3" FontSize="30" Click="Number_Click"/>
-		<Button Content="-" Grid.Column="3" Grid.Row="3" FontSize="30" Click="Action_Click"/>
-		<Button Content="1" Grid.Column="0" Grid.Row="4" FontSize="30" Click="Number_Click"/>
-		<Button Content="2" Grid.Column="1" Grid.Row="4" FontSize="30" Click="Number_Click"/>
-		<Button Content="3" Grid.Column="2" Grid.Row="4" FontSize="30" Click="Number_Click"/>
-		<Button Content="+" Grid.Column="3" Grid.Row="4" FontSize="30" Click="Action_Click"/>
+		<Button Content="C" Grid.Column="0" Grid.Row="1" Style="{StaticResource Clear}"/>
+		<Button Content="÷" Grid.Column="3" Grid.Row="1" Style="{StaticResource Actions}" />
+		<Button Content="7" Grid.Column="0" Grid.Row="2" />
+		<Button Content="8" Grid.Column="1" Grid.Row="2" />
+		<Button Content="9" Grid.Column="2" Grid.Row="2" />
+		<Button Content="×" Grid.Column="3" Grid.Row="2" Style="{StaticResource Actions}" />
+		<Button Content="4" Grid.Column="0" Grid.Row="3" />
+		<Button Content="5" Grid.Column="1" Grid.Row="3" />
+		<Button Content="6" Grid.Column="2" Grid.Row="3" />
+		<Button Content="-" Grid.Column="3" Grid.Row="3" Style="{StaticResource Actions}" />
+		<Button Content="1" Grid.Column="0" Grid.Row="4" />
+		<Button Content="2" Grid.Column="1" Grid.Row="4" />
+		<Button Content="3" Grid.Column="2" Grid.Row="4" />
+		<Button Content="+" Grid.Column="3" Grid.Row="4" Style="{StaticResource Actions}" />
 		<Button Content="±" IsEnabled="False" Grid.Column="0" Grid.Row="5" FontSize="30" Click="Number_Click"/>
-		<Button Content="0" Grid.Column="1" Grid.Row="5" FontSize="30" Click="Number_Click"/>
-		<Button Content="," Grid.Column="2" Grid.Row="5" FontSize="30" Click="Number_Click"/>
-		<Button Content="=" Grid.Column="3" Grid.Row="5" FontSize="30" Click="Result_Click"/>
+		<Button Content="0" Grid.Column="1" Grid.Row="5" />
+		<Button Content="," Grid.Column="2" Grid.Row="5" />
+		<Button Content="=" Grid.Column="3" Grid.Row="5" Style="{StaticResource Result}" />
 	</Grid>
 </Window>

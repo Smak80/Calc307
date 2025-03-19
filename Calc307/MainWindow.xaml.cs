@@ -91,5 +91,11 @@ namespace Calc307
             _data.IsNew = true;
         }
 
+        private void Theme_Click(object sender, RoutedEventArgs e)
+        {
+            var dict = new ResourceDictionary { Source = new Uri("Marina.xaml", UriKind.Relative) };
+            Resources.MergedDictionaries.Clear();
+            Resources.MergedDictionaries.Add(dict);
+        }
     }
 }
